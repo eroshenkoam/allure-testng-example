@@ -1,5 +1,6 @@
 package io.eroshenkoam.allure;
 
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -25,6 +26,7 @@ public class NotesWebTest {
         steps.startDriver();
     }
 
+    @AllureId("4")
     @Story("Creating note")
     @JiraIssues({@JiraIssue("AE-2")})
     @Test(description = "Creating note for authorized user", groups = {"web", "critical", "smoke", "regress"})
@@ -34,6 +36,7 @@ public class NotesWebTest {
         steps.notesShouldContainsNoteWithText(NOTE_TEXT);
     }
 
+    @AllureId("7")
     @Story("Creating note")
     @JiraIssues({@JiraIssue("AE-1")})
     @Test(description = "Adding note to advertisement", groups = {"web", "regress"})
@@ -46,6 +49,7 @@ public class NotesWebTest {
         steps.notesShouldContainsNoteWithText(NOTE_TEXT);
     }
 
+    @AllureId("2")
     @Story("Delete note")
     @JiraIssues({@JiraIssue("AE-1")})
     @Test(description = "Deleting note for authorized user", groups = {"web", "regress"})

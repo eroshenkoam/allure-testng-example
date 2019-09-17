@@ -1,5 +1,6 @@
 package io.eroshenkoam.allure;
 
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -25,6 +26,7 @@ public class FavoritesWebTest {
         steps.startDriver();
     }
 
+    @AllureId("1")
     @Story("Add to favorites")
     @JiraIssues({@JiraIssue("AE-1"), @JiraIssue("AE-2")})
     @Test(description = "Creating note via api", groups = {"api", "smoke"})
@@ -34,6 +36,7 @@ public class FavoritesWebTest {
         steps.notesShouldContainsNoteWithText(NOTE_TEXT);
     }
 
+    @AllureId("3")
     @JiraIssue("AE-2")
     @Story("Remove from favorites")
     @Test(description = "Deleting note via api", groups = {"web", "regress"})
