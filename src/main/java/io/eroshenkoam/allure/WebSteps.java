@@ -16,9 +16,6 @@ public class WebSteps {
 
     @Step("Starting web driver")
     public void startDriver() {
-        if (new Random().nextBoolean() && new Random().nextBoolean()) {
-            throw new RuntimeException("Selenium timeout: selenium unavailable now");
-        }
     }
 
     @Step("Stopping web driver")
@@ -27,6 +24,9 @@ public class WebSteps {
 
     @Step("Open notes page")
     public void openNotesPage() {
+        if (new Random().nextBoolean() && new Random().nextBoolean()) {
+            throw new RuntimeException("Selenium timeout: selenium unavailable now");
+        }
         attachPageSource();
     }
 
@@ -45,7 +45,6 @@ public class WebSteps {
 
     @Step("Check note with `{text}` not exists")
     public void notesShouldNotContainsNoteWithText(final String text) {
-
     }
 
     @Step("Open advertisement page `{id}`")
