@@ -26,7 +26,7 @@ public class FavoritesWebTest {
         steps.startDriver();
     }
 
-    @AllureId("1")
+    @AllureId("7")
     @Story("Add to favorites")
     @JiraIssues({@JiraIssue("AE-1"), @JiraIssue("AE-2")})
     @Test(description = "Creating note via api", groups = {"api", "smoke"})
@@ -36,7 +36,7 @@ public class FavoritesWebTest {
         steps.notesShouldContainsNoteWithText(NOTE_TEXT);
     }
 
-    @AllureId("3")
+    @AllureId("1")
     @JiraIssue("AE-2")
     @Story("Remove from favorites")
     @Test(description = "Deleting note via api", groups = {"web", "regress"})

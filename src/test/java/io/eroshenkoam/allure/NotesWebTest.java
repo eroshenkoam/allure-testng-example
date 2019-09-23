@@ -26,7 +26,7 @@ public class NotesWebTest {
         steps.startDriver();
     }
 
-    @AllureId("4")
+    @AllureId("2")
     @Story("Creating note")
     @JiraIssues({@JiraIssue("AE-2")})
     @Test(description = "Creating note for authorized user", groups = {"web", "critical", "smoke", "regress"})
@@ -36,7 +36,7 @@ public class NotesWebTest {
         steps.notesShouldContainsNoteWithText(NOTE_TEXT);
     }
 
-    @AllureId("7")
+    @AllureId("3")
     @Story("Creating note")
     @JiraIssues({@JiraIssue("AE-1")})
     @Test(description = "Adding note to advertisement", groups = {"web", "regress"})
@@ -49,7 +49,7 @@ public class NotesWebTest {
         steps.notesShouldContainsNoteWithText(NOTE_TEXT);
     }
 
-    @AllureId("2")
+    @AllureId("5")
     @Story("Delete note")
     @JiraIssues({@JiraIssue("AE-1")})
     @Test(description = "Deleting note for authorized user", groups = {"web", "regress"})
