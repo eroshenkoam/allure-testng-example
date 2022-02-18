@@ -28,10 +28,10 @@ apply(plugin = "io.qameta.allure")
 configure<AllureExtension> {
     autoconfigure = true
     aspectjweaver = true
-    version = "2.12.1"
+    version = "2.17.2"
 
     useTestNG {
-        version = "2.12.1"
+        version = "2.17.2"
     }
 
 }
@@ -49,7 +49,6 @@ tasks.withType(Test::class) {
 
 
 repositories {
-    maven(url = "https://dl.bintray.com/qameta/maven-unstable/")
     mavenCentral()
     mavenLocal()
 }
@@ -59,5 +58,4 @@ dependencies {
     compile("io.qameta.allure:allure-java-commons:2.12.1")
 
     testCompile("org.testng:testng:6.14.3")
-    testCompile("io.qameta.allure:allure-ee-testng:3.18.0")
 }
